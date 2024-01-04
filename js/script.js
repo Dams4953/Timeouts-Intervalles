@@ -57,3 +57,42 @@ window.onload = timerStart;
 */
 
 //EXO 3
+
+window.onload = function () {
+    let score = 0;
+    const scoreDisplay = document.createElement('div');
+    scoreDisplay.id = 'score';
+    scoreDisplay.innerText = 'Score: 0';
+    document.body.appendChild(scoreDisplay);
+
+    function taupeStart() {
+        let trous = document.querySelectorAll('.trou');
+        let aléatoire = Math.floor(Math.random() * trous.length);
+        let taupe = document.createElement('div');
+        taupe.classList.add('taupe');
+        trous[aléatoire].appendChild(taupe);
+
+        taupe.addEventListener('click', function () {
+            score++;
+            scoreDisplay.innerText = 'Score: ' + score;
+            taupe.remove();
+        });
+
+        setTimeout(() => {
+            taupe.remove();
+        }, 1000);
+    }
+
+    setInterval(taupeStart, 1000);
+};
+
+
+
+
+
+
+
+
+
+
+
