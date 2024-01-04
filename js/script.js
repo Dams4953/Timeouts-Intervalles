@@ -25,4 +25,35 @@ MachineEcrire();
 
 
 
+//EXO 2
 
+/*
+function timerStart() {
+
+    let compteur = 0;
+    let timerId = document.getElementById ('timer')
+
+    function timerUpdate() {
+        compteur++;
+        let minute
+
+        if (compteur >= 120) {
+            let minutes = Math.floor(compteur / 60);
+            minute = minutes + " minutes se sont écoulées";
+        } else if (compteur >= 60) {
+            minute = "1 minute s'est écoulée";
+
+        }else{
+            minute = compteur + " secondes";
+        }
+           
+
+        timerId.innerText = minute;
+    }
+    setInterval(timerUpdate, 50);
+}
+
+window.onload = timerStart;
+*/
+
+//EXO 3
